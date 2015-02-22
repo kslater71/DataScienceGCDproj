@@ -38,7 +38,7 @@ Values: 1-30
 Description: The unique ID of the test volunteer. These are sources from the subject_test.txt and subject_train.txt files in the source data.
 
 
-### SubjectID 
+### ActivityName
 
 Type: chr
 
