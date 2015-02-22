@@ -29,18 +29,38 @@ Groups: SubjectID, ActivityName
 </pre>
 
 This data set consists of the following<p>
-### SubjectID : 
-Type: Integer
+### SubjectID 
 
-Values : 1-30
+Type: int
 
-Description : The unique ID of the test volunteer. These are sources from the subject_test.txt and subject_train.txt files in the source data.
+Values: 1-30
+
+Description: The unique ID of the test volunteer. These are sources from the subject_test.txt and subject_train.txt files in the source data.
 
 
-* ActivityName : The name of the activity being performed. These values from the from activity identifiers in the y_test.txt and y_train.txt source files; which are then matched activity names in the activity_labels.txt
-* Variable : These are the variable names from the features.txt source file. The output data includes only the source features of the type *.mean() or *.std().  For clarity, and to align with R standards, the source feature names have been modified to replace any "()" with ".".  For example the source feature "tBodyAcc-mad()-Y" appears as "tBodyAcc-mad.-Y" in the output data.
-* AvgValue : The average value of the observations for the specific SubjectID, ActivityName and Variable. 
-* 
+### SubjectID 
+
+Type: chr
+
+Values: "WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"
+
+Description: The name of the activity being performed. These values from the from activity identifiers in the y_test.txt and y_train.txt source files; which are then matched activity names in the activity_labels.txt
+
+### Variable
+
+Type: factor
+
+Values: "tBodyAcc.mean.X","tBodyAcc.mean.Y","tBodyAcc.mean.Z","tBodyAcc.std.X","tBodyAcc.std.Y","tBodyAcc.std.Z","tGravityAcc.mean.X","tGravityAcc.mean.Y","tGravityAcc.mean.Z","tGravityAcc.std.X","tGravityAcc.std.Y","tGravityAcc.std.Z","tBodyAccJerk.mean.X","tBodyAccJerk.mean.Y","tBodyAccJerk.mean.Z","tBodyAccJerk.std.X","tBodyAccJerk.std.Y","tBodyAccJerk.std.Z","tBodyGyro.mean.X","tBodyGyro.mean.Y","tBodyGyro.mean.Z","tBodyGyro.std.X","tBodyGyro.std.Y","tBodyGyro.std.Z","tBodyGyroJerk.mean.X","tBodyGyroJerk.mean.Y","tBodyGyroJerk.mean.Z","tBodyGyroJerk.std.X","tBodyGyroJerk.std.Y","tBodyGyroJerk.std.Z","tBodyAccMag.mean","tBodyAccMag.std","tGravityAccMag.mean","tGravityAccMag.std","tBodyAccJerkMag.mean","tBodyAccJerkMag.std","tBodyGyroMag.mean","tBodyGyroMag.std","tBodyGyroJerkMag.mean","tBodyGyroJerkMag.std","fBodyAcc.mean.X","fBodyAcc.mean.Y","fBodyAcc.mean.Z","fBodyAcc.std.X","fBodyAcc.std.Y","fBodyAcc.std.Z","fBodyAccJerk.mean.X","fBodyAccJerk.mean.Y","fBodyAccJerk.mean.Z","fBodyAccJerk.std.X","fBodyAccJerk.std.Y","fBodyAccJerk.std.Z","fBodyGyro.mean.X","fBodyGyro.mean.Y",,"fBodyGyro.mean.Z","fBodyGyro.std.X","fBodyGyro.std.Y","fBodyGyro.std.Z","fBodyAccMag.mean","fBodyAccMag.std","fBodyBodyAccJerkMag.mean","fBodyBodyAccJerkMag.std","fBodyBodyGyroMag.mean","fBodyBodyGyroMag.std","fBodyBodyGyroJerkMag.mean","fBodyBodyGyroJerkMag.std"
+
+Description: These are the variable names from the features.txt source file. The output data includes only the source features of the type *.mean() or *.std().  For clarity, and to align with R standards, the source feature names have been modified to replace any "()" with ".".  For example the source feature "tBodyAcc-mad()-Y" appears as "tBodyAcc-mad.-Y" in the output data.
+
+### AvgValue
+Type: num
+
+Values: real numbers from -1 to 1
+
+Description: The average value of the observations for the specific SubjectID, ActivityName and Variable. 
+
 
 
 
