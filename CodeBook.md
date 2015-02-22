@@ -7,7 +7,7 @@ Human Activity Recognition Using Smartphones Data Set. Full details of the proje
 <p>
 The source data consists of various smartphone accelerometer and gyroscope measurements taken from a group of 30 volunteers, which performing a range of tasks. The data is provided as 2 distinct sets of test and training data.
 
-# Resulting Tidy Data set
+# Output Data
 The run_analysis.R script generates a the data frame "tidyData" in the following form:
 
 <pre>
@@ -27,5 +27,13 @@ Groups: SubjectID, ActivityName
 10         1       LAYING  tGravityAcc.std.X -0.89683002
 ..       ...          ...                ...         ...
 </pre>
+
+This data set consists of the following<p>
+* SubjectID : The unique ID of the test volunteer. These are sources from the subject_test.txt and subject_train.txt files in the source data.
+* ActivityName : The name of the activity being performed. These values from the from activity identifiers in the y_test.txt and y_train.txt source files; which are then matched activity names in the activity_labels.txt
+* Variable : These are the variable names from the features.txt source file. The output data includes only the source features of the type *.mean() or *.std().  For clarity, and to align with R standards, the source feature names have been modified to replace any "()" with ".".  For example the source feature "tBodyAcc-mad()-Y" appears as "tBodyAcc-mad.-Y" in the output data.
+* AvgValue : The average value of the observations for the specific SubjectID, ActivityName and Variable. 
+* 
+
 
 
