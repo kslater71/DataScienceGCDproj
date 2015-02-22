@@ -12,7 +12,8 @@ The script assumes that the source file "getdata-projectfiles-UCI HAR Dataset.zi
 
 <p> The script consists of 3 functions that read the source files (getFeatures, getActivities, and getData) and the main code block.
 <p>
-The main code block consists of the following steps:
+The main code block consists of the following steps:<p>
+
 1. Data frames are created from the source files for the features (i.e. measure names) and activities. 
 2. Data frames are created from the source data for the test and train data sets. Column names are assigned based on the features data frame.
 3. The test and train data frames are combined into a new data frame named "allData".
@@ -23,6 +24,7 @@ The main code block consists of the following steps:
 8. A new data frame "tidyData" is created to satisfy the tidy data requirement for step 5. This consists of a) reducing the columns to 4 (SubjectID, ActivityName, Variable, AvgValue) b) grouping by SubjectID, ActivityName and Variable, and c) calculating the mean value of each group.
 9. The resulting tidyData is in the following form..
 
+<pre>
    SubjectID ActivityName           Variable    AvgValue
 1          1       LAYING    tBodyAcc.mean.X  0.22159824
 2          1       LAYING    tBodyAcc.mean.Y -0.04051395
@@ -30,5 +32,5 @@ The main code block consists of the following steps:
 4          1       LAYING     tBodyAcc.std.X -0.92805647
 5          1       LAYING     tBodyAcc.std.Y -0.83682741
 ...
-
+</pre>
 
