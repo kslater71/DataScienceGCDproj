@@ -14,8 +14,8 @@ The script assumes that the source file "getdata-projectfiles-UCI HAR Dataset.zi
 <p>
 The main code block consists of the following steps:<p>
 
-1. Data frames are created from the source files for the features (i.e. measure names) and activities. 
-2. Data frames are created from the source data for the test and train data sets. Column names are assigned based on the features data frame.
+1. Data frames are created from the source files for the features (i.e. measure names) and activities, by calling the functions getFeatures() and getActivities().
+2. Data frames are created from the source data for the test and train data sets, using the function getData(). Column names are assigned within the function, based on the features data frame.
 3. The test and train data frames are combined into a new data frame named "allData".
 4. The dimension ActivityName is added to allData, with the values defined based on the existing ActivityID and the activities data frame.
 5. The width of allData is reduced to the desired columns; specifically the SubjectID, ActivityName and any measurement that is of the type .std() or .mean() from the source data. Not that measurements such as  "fBodyBodyGyroJerkMag-meanFreq()" and "angle(Y,gravityMean)" are not included as these are not true standard deviation and mean measurements. 
